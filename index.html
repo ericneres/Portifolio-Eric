@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- Informa ao navegador que estamos usando HTML5. -->
+<html lang="pt-BR">
+<head>
+    <!-- Configurações básicas da página. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio pessoal do Eric: carros, jogos e meus primeiros passos na programação.">
+    <title>Eric | Meu Portfólio</title>
+
+    <!-- O CSS fica em outro arquivo para deixar o projeto organizado. -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- CABEÇALHO: nome do site e links de navegação. -->
+    <header class="cabecalho">
+        <div class="container topo">
+            <a class="logo" href="#inicio">Eric<span>.</span></a>
+
+            <nav aria-label="Menu principal">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN: conteúdo principal do nosso site. -->
+    <main>
+        <!-- SEÇÃO INÍCIO: minha apresentação e minha foto. -->
+        <section id="inicio" class="apresentacao">
+            <div class="container apresentacao-conteudo">
+                <div class="apresentacao-texto">
+                    <p class="etiqueta">MEU PRIMEIRO PORTFÓLIO</p>
+                    <h1>Olá, eu sou o <span>Eric!</span></h1>
+                    <p class="resumo">
+                        Tenho 18 anos, gosto de carros e jogos e estou aprendendo
+                        a criar sites com HTML, CSS e JavaScript.
+                    </p>
+                    <a class="botao" href="#hobbies">Conheça meus hobbies</a>
+                </div>
+
+                <!-- A foto está na pasta imagens. -->
+                <img class="foto-perfil" src="imagens/eric.jpg"
+                     alt="Foto de Eric usando fones de ouvido">
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE: uma apresentação mais detalhada. -->
+        <section id="sobre" class="secao">
+            <div class="container">
+                <h2>Sobre mim</h2>
+                <p class="texto-sobre">
+                    Meu nome é Eric, tenho 18 anos e estou começando meus estudos
+                    em desenvolvimento web. Fiz este portfólio para praticar
+                    HTML, CSS e JavaScript e compartilhar um pouco do que gosto.
+                </p>
+
+                <!-- O JavaScript vai mostrar ou esconder o texto abaixo. -->
+                <button id="botao-curiosidade" class="botao botao-secundario"
+                        type="button" aria-controls="curiosidade" aria-expanded="false">
+                    Mostrar curiosidade
+                </button>
+                <p id="curiosidade" class="curiosidade" hidden>
+                    Uma das coisas que mais me animam é conhecer carros e descobrir novos jogos!
+                </p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO HOBBIES: cada article representa um assunto. -->
+        <section id="hobbies" class="secao secao-clara">
+            <div class="container">
+                <h2>Meus hobbies</h2>
+                <p class="subtitulo">Algumas coisas que fazem parte do meu dia a dia.</p>
+
+                <div class="cartoes">
+                    <article class="cartao">
+                        <span class="icone" aria-hidden="true">🚗</span>
+                        <h3>Carros</h3>
+                        <p>Gosto de carros, de conhecer modelos diferentes e de aprender sobre o mundo automotivo.</p>
+                    </article>
+
+                    <article class="cartao">
+                        <span class="icone" aria-hidden="true">🎮</span>
+                        <h3>Jogos</h3>
+                        <p>Nos momentos livres, gosto de jogar e explorar jogos novos no computador.</p>
+                    </article>
+
+                    <article class="cartao">
+                        <span class="icone" aria-hidden="true">💻</span>
+                        <h3>Programação</h3>
+                        <p>Estou aprendendo a desenvolver sites e quero melhorar meus conhecimentos aos poucos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO: link para meu perfil no GitHub. -->
+        <section id="contato" class="secao contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Quer conhecer meus projetos? Visite meu perfil no GitHub!</p>
+                <a class="botao" href="https://github.com/ericneres"
+                   target="_blank" rel="noopener noreferrer">Acessar meu GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ: o ano é preenchido automaticamente pelo JavaScript. -->
+    <footer class="rodape">
+        <div class="container">
+            <p>© <span id="ano"></span> Eric — Meu primeiro portfólio.</p>
+        </div>
+    </footer>
+
+    <!-- O JavaScript é carregado no final para encontrar os elementos HTML. -->
+    <script src="js/script.js"></script>
+</body>
+</html>

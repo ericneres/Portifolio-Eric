@@ -1,0 +1,281 @@
+/* ====================================================
+   1. ESTILOS GERAIS
+   O seletor * aplica regras a todos os elementos.
+   ==================================================== */
+* {
+    box-sizing: border-box; /* Inclui bordas e espaços no tamanho total. */
+}
+
+html {
+    scroll-behavior: smooth; /* Deixa a navegação entre seções suave. */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do navegador. */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1b2940;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado dos links. */
+}
+
+/* Limita a largura do conteúdo e centraliza na tela. */
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* ====================================================
+   2. CABEÇALHO E MENU
+   Flexbox organiza elementos na mesma linha.
+   ==================================================== */
+.cabecalho {
+    background-color: #14233b;
+    padding: 18px 0;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f6a340;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #f6a340; /* Muda a cor ao passar o mouse. */
+}
+
+/* ====================================================
+   3. APRESENTAÇÃO
+   O grid separa a apresentação em duas colunas.
+   ==================================================== */
+.apresentacao {
+    background-color: #f1f5fb;
+    padding: 70px 0;
+}
+
+.apresentacao-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.etiqueta {
+    color: #bd6814;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin: 12px 0 20px;
+}
+
+h1 span {
+    color: #d57a1c;
+}
+
+.resumo {
+    font-size: 18px;
+    color: #4d5b70;
+    max-width: 470px;
+    margin-bottom: 30px;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 390px;
+    object-fit: cover; /* Preenche o espaço sem deformar a imagem. */
+    object-position: center 38%;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(20, 35, 59, 0.13);
+}
+
+/* Os links e botões do site usam esta mesma classe. */
+.botao {
+    display: inline-block;
+    padding: 12px 21px;
+    border: 2px solid #d57a1c;
+    border-radius: 9px;
+    background-color: #d57a1c;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #ab5f11;
+    border-color: #ab5f11;
+}
+
+/* ====================================================
+   4. SOBRE MIM E HOBBIES
+   ==================================================== */
+.secao {
+    padding: 65px 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0 0 15px;
+}
+
+.texto-sobre {
+    max-width: 750px;
+    color: #4d5b70;
+}
+
+.botao-secundario {
+    margin-top: 8px;
+    background-color: #ffffff;
+    color: #ad6015;
+}
+
+.botao-secundario:hover {
+    color: #ffffff;
+}
+
+.curiosidade {
+    margin-top: 18px;
+    padding: 15px;
+    border-left: 4px solid #d57a1c;
+    background-color: #fff5e8;
+    border-radius: 6px;
+}
+
+.secao-clara {
+    background-color: #f6f8fc;
+}
+
+.subtitulo {
+    color: #4d5b70;
+    margin-bottom: 25px;
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria três colunas iguais. */
+    gap: 20px;
+}
+
+.cartao {
+    background-color: #ffffff;
+    padding: 25px;
+    border: 1px solid #e1e6ee;
+    border-radius: 12px;
+}
+
+.icone {
+    font-size: 32px;
+}
+
+.cartao h3 {
+    margin: 12px 0 8px;
+    font-size: 20px;
+}
+
+.cartao p {
+    color: #4d5b70;
+    margin: 0;
+}
+
+/* ====================================================
+   5. CONTATO E RODAPÉ
+   ==================================================== */
+.contato {
+    text-align: center;
+}
+
+.contato p {
+    color: #4d5b70;
+    margin-bottom: 24px;
+}
+
+.rodape {
+    background-color: #14233b;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+/* ====================================================
+   6. RESPONSIVIDADE
+   @media muda o estilo quando a tela fica pequena.
+   ==================================================== */
+@media (max-width: 700px) {
+    .topo {
+        flex-direction: column; /* Coloca o menu abaixo do nome. */
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .apresentacao {
+        padding: 45px 0;
+    }
+
+    .apresentacao-conteudo {
+        grid-template-columns: 1fr; /* Usa apenas uma coluna. */
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .foto-perfil {
+        height: 350px;
+        max-width: 430px;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr; /* Empilha os cartões. */
+    }
+
+    .secao {
+        padding: 48px 0;
+    }
+}
+
+/* Respeita a preferência de quem desativa animações no dispositivo. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
